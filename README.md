@@ -50,13 +50,11 @@ ASM/
 ├── data/
 │   └── cve_solution.json
 │
-├── reports/
-│   ├── nuclei_output.txt
-│   ├── scan_result.json
-│   ├── final_report.txt
-│   └── log4shell_poc_result.txt
-│
-└── screenshots/
+└── reports/
+    ├── nuclei_output.txt
+    ├── scan_result.json
+    ├── final_report.txt
+    └── log4shell_poc_result.txt
 ```
 
 ## 실행 순서
