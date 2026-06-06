@@ -71,7 +71,7 @@ ASM/
 
 ### 1. 포트 스캔
 
-Nmap을 활용하여 대상 시스템의 열린 포트를 탐지합니다.
+Nmap을 활용하여 대상 시스템의 열린 포트를 탐지
 
 주요 기능
 
@@ -88,13 +88,12 @@ python port_scan.py
 출력 예시:
 
 ```text
-Port: 2222 | State: open
 Port: 8983 | State: open
 ```
 
 ### 2. 서비스 식별
 
-열린 포트에서 실제 어떤 서비스가 동작 중인지 확인합니다.
+열린 포트에서 실제 어떤 서비스가 동작 중인지 확인
 
 주요 기능
 
@@ -116,12 +115,11 @@ Port: 8983 | Service: http | Product: Apache Solr
 
 ### 3. 운영체제 탐지
 
-OS Fingerprinting을 통해 대상 시스템의 운영체제를 추정합니다.
+OS Fingerprinting을 통해 대상 시스템의 운영체제를 추정
 
 주요 기능
 
 * OS Fingerprinting
-* Vendor 식별
 * Accuracy 기반 추정
 
 예시:
@@ -139,7 +137,7 @@ python os_detect.py
 
 ### 4. 취약점 탐지 (Nuclei)
 
-오픈소스 취약점 스캐너인 **Nuclei**를 활용하여 알려진 CVE를 탐지합니다.
+오픈소스 취약점 스캐너인 Nuclei를 활용하여 CVE를 탐지
 
 지원 취약점
 
@@ -168,7 +166,7 @@ reports/nuclei_output.txt
 
 ### 5. 탐지 결과 분석
 
-Nuclei 탐지 결과를 분석하여 탐지된 CVE 정보를 추출합니다.
+Nuclei 탐지 결과를 분석하여 탐지된 CVE 정보를 추출
 
 예시:
 
@@ -190,13 +188,13 @@ reports/scan_result.json
 
 ### 6. 관리자 조치 가이드 제공
 
-탐지된 취약점에 대해 관리자 입장에서 필요한 대응 방안을 자동으로 제공합니다.
+탐지된 취약점에 대해 관리자 입장에서 필요한 대응 방안을 제공
 
 주요 기능
 
 * 취약점 이름 제공
 * 위험도 제공
-* 대응 방안 자동 출력
+* 대응 방안 출력
 
 예시:
 
@@ -226,11 +224,7 @@ reports/final_report.txt
 
 ### 7. PoC 기반 취약 가능성 검증
 
-탐지된 취약점이 실제로 영향을 줄 수 있는지 PoC를 통해 확인합니다.
-
-현재 구현
-
-* Log4Shell PoC
+탐지된 취약점이 실제로 영향을 줄 수 있는지 PoC를 통해 확인
 
 예시:
 
