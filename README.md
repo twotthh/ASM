@@ -12,8 +12,6 @@
 * **SSH User Enumeration (CVE-2018-15473)**
 * **SambaCry (CVE-2017-7494)**
 
----
-
 ## 프로젝트 목표
 
 1. 대상 시스템의 공격 표면(Attack Surface) 탐지
@@ -61,9 +59,17 @@ ASM/
 └── screenshots/
 ```
 
----
+## 실행 순서
 
-## 주요 기능
+```text
+1. port_scan.py
+2. service_detect.py
+3. os_detect.py
+4. nuclei_scan.py
+5. result_parser.py
+6. remediation.py
+7. log4shell_poc.py
+```
 
 ### 1. 포트 스캔
 
@@ -88,8 +94,6 @@ Port: 2222 | State: open
 Port: 8983 | State: open
 ```
 
----
-
 ### 2. 서비스 식별
 
 열린 포트에서 실제 어떤 서비스가 동작 중인지 확인합니다.
@@ -111,8 +115,6 @@ python service_detect.py
 ```text
 Port: 8983 | Service: http | Product: Apache Solr
 ```
-
----
 
 ### 3. 운영체제 탐지
 
@@ -136,8 +138,6 @@ python os_detect.py
 추정 OS: Microsoft Windows 11
 정확도: 100%
 ```
-
----
 
 ### 4. 취약점 탐지 (Nuclei)
 
@@ -168,8 +168,6 @@ python nuclei_scan.py
 reports/nuclei_output.txt
 ```
 
----
-
 ### 5. 탐지 결과 분석
 
 Nuclei 탐지 결과를 분석하여 탐지된 CVE 정보를 추출합니다.
@@ -191,8 +189,6 @@ CVE-2021-44228
 ```text
 reports/scan_result.json
 ```
-
----
 
 ### 6. 관리자 조치 가이드 제공
 
@@ -230,8 +226,6 @@ python remediation.py
 reports/final_report.txt
 ```
 
----
-
 ### 7. PoC 기반 취약 가능성 검증
 
 탐지된 취약점이 실제로 영향을 줄 수 있는지 PoC를 통해 확인합니다.
@@ -257,44 +251,4 @@ Log4Shell 취약 가능성 존재
 
 ```text
 reports/log4shell_poc_result.txt
-```
-
----
-
-## Docker 기반 테스트 환경
-
-### Log4Shell (Apache Solr)
-
-실행:
-
-```bash
-docker run -d -p 8983:8983 --name solr-test vulhub/solr:8.11.0
-```
-
-접속:
-
-```text
-http://127.0.0.1:8983/solr/
-```
-
-### SSH User Enumeration
-
-실행:
-
-```bash
-docker run -d -p 2222:22 --name ssh-test cve-2018-15473-sshd
-```
-
----
-
-## 실행 순서
-
-```text
-1. port_scan.py
-2. service_detect.py
-3. os_detect.py
-4. nuclei_scan.py
-5. result_parser.py
-6. remediation.py
-7. log4shell_poc.py
 ```
