@@ -1,6 +1,5 @@
 import json
 
-
 def parse_result():
     try:
         with open("../reports/nuclei_output.txt", "r", encoding="utf-8") as f:
@@ -74,7 +73,6 @@ def parse_result():
 
     except FileNotFoundError:
         print("[-] nuclei_output.txt 파일이 없습니다.")
-
 
 if __name__ == "__main__":
     parse_result()
