@@ -1,0 +1,6 @@
+[+] Log4Shell PoC 결과
+Target: http://127.0.0.1:8983
+Status Code: 200
+
+[!] Solr 응답 확인됨
+[!] Log4Shell 취약 가능성 존재
