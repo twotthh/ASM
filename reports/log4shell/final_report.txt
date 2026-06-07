@@ -7,4 +7,3 @@
 1. Log4j 2.17 이상으로 업데이트
 2. JndiLookup.class 제거
 3. 외부 LDAP/RMI 통신 차단
-
