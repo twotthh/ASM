@@ -1,6 +1,5 @@
 import nmap
 
-
 def detect_os(target):
     scanner = nmap.PortScanner()
 
@@ -29,7 +28,6 @@ def detect_os(target):
                 print("OS 정보를 찾을 수 없습니다.")
         else:
             print("OS 탐지 실패")
-
 
 if __name__ == "__main__":
     target = input("IP 입력: ")
