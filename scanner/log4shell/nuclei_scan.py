@@ -1,19 +1,16 @@
 import subprocess
 
-
 def run_nuclei(target):
     print(f"\n[+] {target} 취약점 탐지 시작...\n")
 
     command = ["nuclei", "-u", target]
 
-    # Solr 관련 탐지
     if "8983" in target:
         command.extend([
             "-tags",
             "solr"
         ])
 
-    # SSH User Enumeration 탐지
     elif "2222" in target:
         command.extend([
             "-t",
