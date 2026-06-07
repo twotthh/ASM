@@ -57,7 +57,7 @@ ASM/
     └── log4shell_poc_result.txt
 ```
 
-## 실행 순서
+## 실행 순서 - Log4Shell 기준
 
 ```text
 1. port_scan.py
