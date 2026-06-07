@@ -1,6 +1,5 @@
 import requests
 
-
 def log4shell_check(target):
     print(f"\n[+] {target} Log4Shell 취약점 확인 시작...\n")
 
