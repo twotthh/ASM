@@ -1,0 +1,14 @@
+{
+  "CVE-2018-15473": {
+    "title": "OpenSSH User Enumeration Vulnerability",
+    "severity": "Medium",
+    "description": "구버전 OpenSSH의 오류로 인해 공격자가 서버 내 유효한 사용자 계정 명칭을 알아낼 수 있습니다.",
+    "solution": "1. OpenSSH 서버를 최신 버전(8.0p1 이상)으로 업데이트하십시오.\n2. 방화벽(UFW 등)을 통해 신뢰된 관리자 IP만 SSH 포트에 접근할 수 있도록 제한하십시오."
+  },
+  "CVE-2023-48795": {
+    "title": "OpenSSH Terrapin Attack Vulnerability",
+    "severity": "Medium",
+    "description": "SSH 프로토콜 핸드셰이크 과정의 암호학적 결함으로 중간자 공격(MITM) 시 데이터 변조가 가능합니다.",
+    "solution": "1. /etc/ssh/sshd_config 설정에서 chacha20-poly1305 알고리즘을 제거하십시오.\n2. OpenSSH 버전을 패치가 적용된 9.6p1 이상으로 업그레이드하십시오."
+  }
+}
