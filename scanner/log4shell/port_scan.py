@@ -1,12 +1,10 @@
 import nmap
 
-
 def scan_ports(target):
     scanner = nmap.PortScanner()
 
     print(f"\n[+] {target} 포트 스캔 시작...\n")
 
-    # 포트만 확인
     scanner.scan(target, arguments='-p 1-10000 -Pn')
 
     for host in scanner.all_hosts():
@@ -21,7 +19,6 @@ def scan_ports(target):
                 print(
                     f"Port: {port} | State: {state}"
                 )
-
 
 if __name__ == "__main__":
     target = input("IP 입력: ")
